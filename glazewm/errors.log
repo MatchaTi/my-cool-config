@@ -1,0 +1,29 @@
+[2m2024-11-10T04:23:46.391528Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-10T11:03:05.652336Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-10T11:20:52.554515Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 302 column 1, while parsing a block mapping
+[2m2024-11-10T11:21:03.488048Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 302 column 1, while parsing a block mapping
+[2m2024-11-10T11:22:22.442275Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 302 column 1, while parsing a block mapping
+[2m2024-11-10T11:22:43.039433Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 302 column 1, while parsing a block mapping
+[2m2024-11-10T11:22:46.551967Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 302 column 1, while parsing a block mapping
+[2m2024-11-10T11:23:54.737992Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 303 column 1, while parsing a block mapping
+[2m2024-11-10T11:25:12.610593Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 303 column 1, while parsing a block mapping
+[2m2024-11-10T11:25:29.082366Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 303 column 1, while parsing a block mapping
+[2m2024-11-10T11:25:40.262248Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 303 column 1, while parsing a block mapping
+[2m2024-11-10T11:25:52.603300Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[50].bindings: invalid type: string "alt+c", expected a sequence at line 304 column 15
+[2m2024-11-10T11:26:06.900902Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[50]: missing field `commands` at line 303 column 5
+[2m2024-11-10T11:26:15.089043Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[50].commands: invalid type: string "exec code", expected a sequence at line 303 column 15
+[2m2024-11-10T11:26:24.407091Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[50].commands: invalid type: string "exec 'code'", expected a sequence at line 303 column 15
+[2m2024-11-10T11:26:54.134629Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[50]: missing field `commands` at line 303 column 5
+[2m2024-11-10T11:27:15.001103Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[50].commands: invalid type: string "exec explorer", expected a sequence at line 303 column 15
+[2m2024-11-10T11:27:41.436847Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[50].commands: invalid type: string "exec explorer", expected a sequence at line 303 column 15
+[2m2024-11-10T11:28:48.122844Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-10T11:31:17.186127Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute 'terminal'.\n\nError: The operation was canceled by the user. (0x800704C7)"
+[2m2024-11-10T11:38:00.403654Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 243 column 5, while parsing a block mapping at line 238 column 5
+[2m2024-11-10T11:38:06.754533Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 243 column 5, while parsing a block mapping at line 238 column 5
+[2m2024-11-11T02:19:55.649981Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected hexadecimal number at line 242 column 21, while parsing a quoted scalar at line 242 column 16
+[2m2024-11-11T02:20:16.757319Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected hexadecimal number at line 242 column 22, while parsing a quoted scalar at line 242 column 16
+[2m2024-11-11T05:00:38.561933Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-11T09:48:49.377201Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-11T12:01:00.337152Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-12T12:41:46.282020Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Workspace with name '2' doesn't exist or is already active.
+[2m2024-11-12T13:36:10.910591Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
