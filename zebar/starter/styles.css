@@ -4,26 +4,6 @@
  */
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
 
-i {
-  /* color: rgb(115 130 175 / 95%); */
-  /* color: #b185db; */
-  color: rgb(255 255 255 / 90%);
-  /* margin-right: 7px; */
-}
-
-.badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgb(255 255 255 / 5%);
-  margin-right: 4px;
-  padding: 4px 8px;
-  color: rgb(255 255 255 / 90%);
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
 body {
   color: rgb(255 255 255 / 90%);
   font-family: "JetBrainsMono Nerd Font", ui-monospace, monospace;
@@ -31,17 +11,10 @@ body {
   overflow: hidden;
 }
 
-html,
-body,
 #root {
-  height: 100%;
-}
-
-#root {
-  border-bottom: 1px solid rgb(255 255 255 / 5%);
-  /* background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%)); */
-  /* background: #030712; */
-  background: #232634;
+  /*border-bottom: 1px solid rgb(255 255 255 / 5%);*/
+  /*background: #232634;*/
+  background: transparent;
 }
 
 .app {
@@ -49,7 +22,7 @@ body,
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 100%;
-  padding: 4px 1.5vw;
+  padding: 12px 20px;
 }
 
 .left,
@@ -67,14 +40,19 @@ body,
   justify-self: end;
 }
 
-.logo,
-.binding-mode,
-.tiling-direction,
-.network,
-.memory,
-.cpu,
-.battery {
-  margin-right: 12px;
+i {
+  color: rgb(255 255 255 / 90%);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #232634;
+  padding: 12px 16px;
+  color: rgb(255 255 255 / 90%);
+  border: none;
+  cursor: pointer;
 }
 
 .network {
@@ -103,12 +81,9 @@ body,
 }
 
 .workspace {
-  background: rgb(255 255 255 / 5%);
-  margin-right: 4px;
-  padding: 4px 8px;
+  background: #232634;
   color: rgb(255 255 255 / 90%);
   border: none;
-  border-radius: 2px;
   cursor: pointer;
 
   &.displayed {
@@ -117,30 +92,16 @@ body,
 
   &.focused,
   &:hover {
-    /* background: rgb(75 115 255 / 50%); */
-    background: #b185db;
+    background: #8aadf4;
   }
 }
 
-.binding-mode,
+
 .tiling-direction {
-  /* background: rgb(255 255 255 / 15%); */
   background: #b185db;
-  color: rgb(255 255 255 / 90%);
-  border-radius: 2px;
-  line-height: 1;
-  padding: 4px 8px;
-  border: 0;
-  cursor: pointer;
+  font-size: 14px;
 }
 
-.tiling-direction {
-  background-color: #8aadf4;
-}
-
-.binding-mode {
-  margin-right: 4px;
-}
 .cpu .high-usage {
   color: #900029;
 }
@@ -154,4 +115,11 @@ body,
   font-size: 7px;
   left: -8px;
   top: 3px;
+}
+
+.network,
+.logo,
+.cpu,
+.memory {
+  display: none;
 }

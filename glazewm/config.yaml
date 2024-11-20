@@ -36,7 +36,7 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "60px"
+    top: "70px"
     right: "20px"
     bottom: "20px"
     left: "20px"
@@ -47,8 +47,8 @@ window_effects:
     # Highlight the window with a colored border.
     # ** Exclusive to Windows 11 due to API limitations.
     border:
-      enabled: true
-      color: "#b185db"
+      enabled: false
+      color: "#8aadf4"
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -65,7 +65,7 @@ window_effects:
   # Visual effects to apply to non-focused windows.
   other_windows:
     border:
-      enabled: true
+      enabled: false
       color: "#a1a1a1"
     hide_title_bar:
       enabled: false
@@ -225,7 +225,7 @@ keybindings:
 
   # Close focused window.
   - commands: ["close"]
-    bindings: ["alt+escape"]
+    bindings: ["alt+q"]
 
   # open windows explorer
   - commands: ["shell-exec explorer"]
@@ -248,7 +248,7 @@ keybindings:
   # Terminal and Git Bash respectively.
   # - commands: ["shell-exec pwsh"]
   - commands: ["shell-exec wt"]
-    bindings: ["alt+enter"]
+    bindings: ["alt+t"]
 
   # for vs code
   - commands: ["shell-exec code"]
