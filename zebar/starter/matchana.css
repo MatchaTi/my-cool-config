@@ -69,6 +69,7 @@ i {
 
 .battery {
   color: #e69875;
+
   i {
     color: #e69875;
   }
@@ -76,6 +77,7 @@ i {
 
 .weather {
   color: #dbbc7f;
+
   i {
     color: #dbbc7f;
   }
@@ -122,8 +124,8 @@ i {
 .battery .charging-icon {
   position: absolute;
   font-size: 7px;
-  left: -8px;
-  top: 3px;
+  left: 8px;
+  top: 17px;
 }
 
 .network,
