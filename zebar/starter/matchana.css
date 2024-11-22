@@ -104,6 +104,7 @@ i {
 
   &.focused,
   &:hover {
+    color: #1e2326;
     background: #a7c080;
   }
 }
