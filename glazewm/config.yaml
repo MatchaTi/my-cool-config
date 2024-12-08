@@ -99,18 +99,20 @@ window_behavior:
 
 workspaces:
   - name: "1"
-    display_name: "💻 Code"
+    display_name: "Code"
     keep_alive: true
   - name: "2"
-    display_name: "🦁 Browser"
+    display_name: "Browser"
     keep_alive: true
   - name: "3"
-    display_name: "📂 Explorer"
+    display_name: "Design"
     keep_alive: true
   - name: "4"
-    display_name: "🎧 Music"
+    display_name: "Explorer"
     keep_alive: true
   - name: "5"
+    display_name: "Music"
+    keep_alive: true
   - name: "6"
   - name: "7"
   - name: "8"

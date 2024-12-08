@@ -8,8 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../normalize.css" />
 
     <!-- Custom styles. -->
-    <!-- <link rel="stylesheet" type="text/css" href="./roselia.css" /> -->
-    <link rel="stylesheet" type="text/css" href="./matchana.css" />
+    <link rel="stylesheet" type="text/css" href="./minimal.css" />
 
     <!-- Add empty favicon to suppress not found errors. -->
     <link rel="icon" href="data:;" />
@@ -114,15 +113,17 @@
           }
         }
 
+        if (output.glazewm) console.log(output.glazewm, "all windows cuyy");
+
         return (
           <div className='app'>
             <div className='left'>
-              <i className='logo nf nf-fa-windows'></i>
+              <i className='logo item nf nf-fa-windows'></i>
               {output.glazewm && (
                 <div className='workspaces'>
                   {output.glazewm.currentWorkspaces.map((workspace) => (
                     <button
-                      className={`badge workspace ${
+                      className={`workspace item ${
                         workspace.hasFocus && "focused"
                       } ${workspace.isDisplayed && "displayed"}`}
                       onClick={() =>
@@ -139,11 +140,7 @@
               )}
             </div>
 
-            <div className='center'></div>
-
             <div className='right'>
-              <div className='badge date'>{output.date?.formatted}</div>
-
               {output.glazewm && (
                 <>
                   {output.glazewm.bindingModes.map((bindingMode) => (
@@ -153,7 +150,7 @@
                   ))}
 
                   <button
-                    className={`badge tiling-direction nf ${
+                    className={`item tiling-direction nf ${
                       output.glazewm.tilingDirection === "horizontal"
                         ? "nf-md-swap_horizontal"
                         : "nf-md-swap_vertical"
@@ -165,22 +162,57 @@
                 </>
               )}
 
+              <button
+                className='item app-bar'
+                onClick={() => output.glazewm.runCommand("shell-exec brave")}
+              >
+                <img src='assets/brave.svg' alt='Brave' />
+              </button>
+
+              <button
+                className='item app-bar'
+                onClick={() => output.glazewm.runCommand("shell-exec code")}
+              >
+                <img src='assets/vscode.svg' alt='VS Code' />
+              </button>
+
+              <button
+                className='item app-bar'
+                onClick={() => output.glazewm.runCommand("shell-exec wt")}
+              >
+                <img src='assets/terminal.svg' alt='Terminal' />
+              </button>
+
+              <button
+                className='item app-bar'
+                onClick={() => output.glazewm.runCommand("shell-exec explorer")}
+              >
+                <img src='assets/folder.svg' alt='Folder' />
+              </button>
+
+              <button
+                className='item app-bar'
+                onClick={() => output.glazewm.runCommand("shell-exec spotify")}
+              >
+                <img src='assets/spotify.svg' alt='Spotify' />
+              </button>
+
               {output.network && (
-                <div className='badge network'>
+                <div className='network item'>
                   {getNetworkIcon(output.network)}
                   {output.network.defaultGateway?.ssid}
                 </div>
               )}
 
               {output.memory && (
-                <div className='badge memory'>
+                <div className='memory hidden'>
                   <i className='nf nf-fae-chip'></i>
                   {Math.round(output.memory.usage)}%
                 </div>
               )}
 
               {output.cpu && (
-                <div className='badge cpu'>
+                <div className='cpu hidden'>
                   <i className='nf nf-oct-cpu'></i>
 
                   {/* Change the text color if the CPU usage is high. */}
@@ -191,7 +223,7 @@
               )}
 
               {output.battery && (
-                <div className='badge battery'>
+                <div className='battery item'>
                   {/* Show icon for whether battery is charging. */}
                   {output.battery.isCharging && (
                     <i className='nf nf-md-power_plug charging-icon'></i>
@@ -202,11 +234,12 @@
               )}
 
               {output.weather && (
-                <div className='badge weather'>
+                <div className='weather item'>
                   {getWeatherIcon(output.weather)}
                   {Math.round(output.weather.celsiusTemp)}°C
                 </div>
               )}
+              <div className='date item'>{output.date?.formatted}</div>
             </div>
           </div>
         );

@@ -52,3 +52,15 @@ Caused by:
 Caused by:
     Access is denied. (os error 5)
 [2m2024-11-13T09:56:58.855742Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-23T03:16:41.898093Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-12-07T09:34:22.129928Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m unknown anchor at line 80 column 15
+[2m2024-12-07T09:34:47.356922Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m unknown anchor at line 98 column 37
+[2m2024-12-07T09:38:15.458391Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general: missing field `cursor_jump` at line 34 column 3
+[2m2024-12-07T09:38:34.488786Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general: missing field `cursor_jump` at line 37 column 3
+[2m2024-12-07T09:38:44.136973Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general: missing field `cursor_jump` at line 41 column 3
+[2m2024-12-07T09:38:51.832514Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general: missing field `cursor_jump` at line 44 column 3
+[2m2024-12-07T09:39:03.825520Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general: missing field `cursor_jump` at line 47 column 3
+[2m2024-12-07T09:39:16.968570Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general: missing field `cursor_jump` at line 32 column 9
+[2m2024-12-07T09:39:29.763822Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m gaps.outer_gap: invalid type: string "1", expected struct RectDelta at line 62 column 14
+[2m2024-12-07T09:58:02.863985Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-12-07T10:02:44.432603Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
