@@ -36,28 +36,28 @@ button {
 .right {
   display: flex;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
-  border: 1px solid rgba(77, 77, 77, 0.5);
+  border: 1px solid rgba(77, 77, 77, 0.8);
+  background-color: #202020;
+  padding: 4px;
 }
 
 .item {
   padding: 0 16px;
-  background-color: #202020;
   overflow: hidden;
-  height: 40px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
 }
 
+.date,
+.focused,
 .item:hover {
-  background-color: #4d4d4d;
-}
-
-.focused {
-  font-weight: bold;
-  background-color: #4d4d4d;
+  background-color: #a7c080;
+  color: #1c1c1c;
 }
 
 .network,
