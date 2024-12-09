@@ -1,125 +1,149 @@
-/**
- * Import the Nerdfonts icon font.
- * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
- */
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+:root {
+  --black: #191919;
+  --accent: #2c2c2c;
+  --red: #e67e80;
+  --pink: #f5c2e7;
+  --yellow: #dbbc7f;
+  --green: #a7c080;
+  --dark-green: #abe9b3;
+  --blue: #7fbbb3;
+  --dark-blue: #96cdfb;
+  --cyan: #83c092;
+  --purple: #d699b6;
+  --dark-purple: #ddb6f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+}
 
 body {
   color: rgb(255 255 255 / 90%);
-  font-family: "JetBrainsMono Nerd Font", ui-monospace, monospace;
+  /* font-family: "Gaegu", sans-serif; */
+  font-family: "JetBrainsMono NF", sans-serif;
   font-size: 12px;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
-#root {
-  /*border-bottom: 1px solid rgb(255 255 255 / 5%);*/
-  /*background: #232634;*/
-  background: transparent;
+.hidden {
+  display: none;
 }
 
-.app {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  height: 100%;
-  padding: 12px 20px;
-}
-
-.left,
-.center,
-.right {
-  display: flex;
-  align-items: center;
-}
-
-.center {
-  justify-self: center;
-}
-
-.right {
-  justify-self: end;
-}
-
-i {
-  color: rgb(255 255 255 / 90%);
-}
-
-.badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #232634;
-  padding: 12px 16px;
-  color: rgb(255 255 255 / 90%);
+button {
+  background: none;
+  color: inherit;
   border: none;
   cursor: pointer;
 }
 
-.network {
-  background-color: #7dc4e4;
+.app {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background-color: var(--black);
+  padding: 8px 24px;
+  border-bottom: 2px solid var(--accent);
 }
 
-.memory {
-  background-color: #b185db;
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 24px;
 }
 
-.cpu {
-  background-color: #c6a0f6;
+.right {
+  justify-content: flex-end;
 }
 
-.battery {
-  background-color: #ff83ca;
-}
-
-.weather {
-  background-color: #fcabe1;
+.date {
+  text-align: center;
 }
 
 .workspaces {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
-.workspace {
-  background: #232634;
-  color: rgb(255 255 255 / 90%);
-  border: none;
-  cursor: pointer;
-
-  &.displayed {
-    background: rgb(255 255 255 / 15%);
-  }
-
-  &.focused,
-  &:hover {
-    background: #8aadf4;
-  }
+.network span {
+  color: var(--pink);
 }
 
+.battery span {
+  color: var(--dark-blue);
+}
+
+.weather span {
+  color: var(--dark-purple);
+}
 
 .tiling-direction {
-  background: #b185db;
-  font-size: 14px;
+  color: var(--cyan);
 }
 
-.cpu .high-usage {
-  color: #900029;
+.separator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent);
 }
 
-.battery {
-  position: relative;
+.box-workspace {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  display: block;
 }
 
-.battery .charging-icon {
-  position: absolute;
-  font-size: 7px;
-  left: -8px;
-  top: 3px;
+.box-workspace:nth-child(1) {
+  background: var(--red);
+}
+
+.box-workspace:nth-child(2) {
+  background: var(--yellow);
+}
+
+.box-workspace:nth-child(3) {
+  background: var(--green);
+}
+
+.box-workspace:nth-child(4) {
+  background: var(--blue);
+}
+
+.box-workspace:nth-child(5) {
+  background: var(--purple);
+}
+
+.box-workspace.focused {
+  width: 40px;
+}
+
+.focused,
+.item:hover {
+  background-color: #a7c080;
+  color: #1c1c1c;
 }
 
 .network,
-.logo,
-.cpu,
-.memory {
-  display: none;
+.battery,
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-bar {
+  margin-top: -4px;
+  width: 10px;
+  height: 10px;
 }

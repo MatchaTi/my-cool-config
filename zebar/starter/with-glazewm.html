@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../normalize.css" />
 
     <!-- Custom styles. -->
-    <link rel="stylesheet" type="text/css" href="./minimal.css" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
 
     <!-- Add empty favicon to suppress not found errors. -->
     <link rel="icon" href="data:;" />
@@ -55,13 +55,13 @@
               return <i className='nf nf-md-ethernet_cable'></i>;
             case "wifi":
               if (networkOutput.defaultGateway?.signalStrength >= 80) {
-                return <i className='nf nf-md-wifi_strength_4'></i>;
+                return <i className='nf nf-fa-wifi'></i>;
               } else if (networkOutput.defaultGateway?.signalStrength >= 65) {
-                return <i className='nf nf-md-wifi_strength_3'></i>;
+                return <i className='nf nf-fa-wifi'></i>;
               } else if (networkOutput.defaultGateway?.signalStrength >= 40) {
-                return <i className='nf nf-md-wifi_strength_2'></i>;
+                return <i className='nf nf-fa-wifi'></i>;
               } else if (networkOutput.defaultGateway?.signalStrength >= 25) {
-                return <i className='nf nf-md-wifi_strength_1'></i>;
+                return <i className='nf nf-fa-wifi'></i>;
               } else {
                 return <i className='nf nf-md-wifi_strength_outline'></i>;
               }
@@ -118,12 +118,13 @@
         return (
           <div className='app'>
             <div className='left'>
-              <i className='logo item nf nf-fa-windows'></i>
+              <i className='logo nf nf-fa-windows'></i>
+              <div className='separator'></div>
               {output.glazewm && (
                 <div className='workspaces'>
                   {output.glazewm.currentWorkspaces.map((workspace) => (
                     <button
-                      className={`workspace item ${
+                      className={`workspace box-workspace ${
                         workspace.hasFocus && "focused"
                       } ${workspace.isDisplayed && "displayed"}`}
                       onClick={() =>
@@ -133,12 +134,15 @@
                       }
                       key={workspace.name}
                     >
-                      {workspace.displayName ?? workspace.name}
+                      <div class=''></div>
+                      {/*{workspace.displayName ?? workspace.name}*/}
                     </button>
                   ))}
                 </div>
               )}
             </div>
+
+            <div className='date'>{output.date?.formatted}</div>
 
             <div className='right'>
               {output.glazewm && (
@@ -150,7 +154,7 @@
                   ))}
 
                   <button
-                    className={`item tiling-direction nf ${
+                    className={`tiling-direction nf ${
                       output.glazewm.tilingDirection === "horizontal"
                         ? "nf-md-swap_horizontal"
                         : "nf-md-swap_vertical"
@@ -162,44 +166,48 @@
                 </>
               )}
 
+              <div className='separator'></div>
+
               <button
-                className='item app-bar'
+                className='app-bar'
                 onClick={() => output.glazewm.runCommand("shell-exec brave")}
               >
                 <img src='assets/brave.svg' alt='Brave' />
               </button>
 
               <button
-                className='item app-bar'
+                className='app-bar'
                 onClick={() => output.glazewm.runCommand("shell-exec code")}
               >
                 <img src='assets/vscode.svg' alt='VS Code' />
               </button>
 
               <button
-                className='item app-bar'
+                className='app-bar'
                 onClick={() => output.glazewm.runCommand("shell-exec wt")}
               >
                 <img src='assets/terminal.svg' alt='Terminal' />
               </button>
 
               <button
-                className='item app-bar'
+                className='app-bar'
                 onClick={() => output.glazewm.runCommand("shell-exec explorer")}
               >
                 <img src='assets/folder.svg' alt='Folder' />
               </button>
 
               <button
-                className='item app-bar'
+                className='app-bar'
                 onClick={() => output.glazewm.runCommand("shell-exec spotify")}
               >
                 <img src='assets/spotify.svg' alt='Spotify' />
               </button>
 
+              <div className='separator'></div>
+
               {output.network && (
-                <div className='network item'>
-                  {getNetworkIcon(output.network)}
+                <div className='state network'>
+                  <span>{getNetworkIcon(output.network)}</span>
                   {output.network.defaultGateway?.ssid}
                 </div>
               )}
@@ -222,24 +230,27 @@
                 </div>
               )}
 
+              <div className='separator'></div>
+
               {output.battery && (
-                <div className='battery item'>
+                <div className='state battery'>
                   {/* Show icon for whether battery is charging. */}
                   {output.battery.isCharging && (
                     <i className='nf nf-md-power_plug charging-icon'></i>
                   )}
-                  {getBatteryIcon(output.battery)}
+                  <span>{getBatteryIcon(output.battery)}</span>
                   {Math.round(output.battery.chargePercent)}%
                 </div>
               )}
 
+              <div className='separator'></div>
+
               {output.weather && (
-                <div className='weather item'>
-                  {getWeatherIcon(output.weather)}
+                <div className='state weather'>
+                  <span>{getWeatherIcon(output.weather)}</span>
                   {Math.round(output.weather.celsiusTemp)}°C
                 </div>
               )}
-              <div className='date item'>{output.date?.formatted}</div>
             </div>
           </div>
         );

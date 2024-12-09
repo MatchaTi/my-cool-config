@@ -64,3 +64,4 @@ Caused by:
 [2m2024-12-07T09:39:29.763822Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m gaps.outer_gap: invalid type: string "1", expected struct RectDelta at line 62 column 14
 [2m2024-12-07T09:58:02.863985Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
 [2m2024-12-07T10:02:44.432603Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-12-09T09:58:06.235077Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
