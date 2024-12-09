@@ -74,15 +74,15 @@ button {
   gap: 12px;
 }
 
-.network span {
+.network {
   color: var(--pink);
 }
 
-.battery span {
+.battery {
   color: var(--dark-blue);
 }
 
-.weather span {
+.weather {
   color: var(--dark-purple);
 }
 
